@@ -1,0 +1,23 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+__pycache__/
+*.pyc
+*.sqlite3
+/static
+/media
+*.pyo
+*.mo
+*~
+uwsgi.ini
+log/**
+!log/placeholder
+media/**
+!media/**/init.txt
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+/logs
+logger_setting.py
+/templates/
+Dockerfile
+docker-compose.yml
+

@@ -1,0 +1,6 @@
+Django==3.0.7
+djangorestframework==3.11.0
+docutils==0.16
+requests==2.23.0
+psycopg2==2.8.5
+urllib3==1.25.9
