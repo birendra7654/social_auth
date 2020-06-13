@@ -17,7 +17,6 @@ media/**
 !**/migrations/__init__.py
 /logs
 logger_setting.py
-/templates/
 Dockerfile
 docker-compose.yml
-
+social_auth/config.py

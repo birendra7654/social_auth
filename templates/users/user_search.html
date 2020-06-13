@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Users</title>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   </head>
+   
+   <body>
+      <div class="container" style="margin-bottom: 23px;">
+          <br/>
+         <div class="row justify-content-center">
+                              <div class="col-12 col-md-10 col-lg-8">
+                                  <form class="card card-sm">
+                                      <div class="card-body row no-gutters align-items-center">
+                                          <div class="col-auto">
+                                              <i class="fas fa-search h4 text-body"></i>
+                                          </div>
+                                          <!--end of col-->
+                                          <div class="col">
+                                              <input id="phone_number" name="phone_number" class="form-control form-control-lg form-control-borderless" type="search" placeholder="enter phone number to search">
+                                          </div>
+                                          <!--end of col-->
+                                          <div class="col-auto">
+                                              <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                          </div>
+                                          <!--end of col-->
+                                      </div>
+                                  </form>
+                              </div>
+                              <!--end of col-->
+                          </div>
+      </div>
+      <div style="padding: 10px;">
+         <table border = "1" width = "100%">
+            
+            <tr>
+               <td>
+                  <table border = "1" width = "100%">
+                     <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Numner</th>
+                     </tr>
+                     {% for user in userprofile_list %}
+                     <tr>
+                        <td><a href="/user/{{user.id}}">{{user.id}}</a> </td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone_number}}</td>
+                     </tr>
+                     {% endfor %}
+                  </table>
+               </td>
+            </tr>
+            
+         </table>
+         
+      </div>
+   </body>
+	
+</html>

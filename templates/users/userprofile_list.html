@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table</title>
+   </head>
+   
+   <body>
+      <div style="padding: 10px;">
+      <table border = "1" width = "100%">
+         
+         <tr>
+            <td>
+               <table border = "1" width = "100%">
+                  <tr>
+                     <th>User ID</th>
+                     <th>Name</th>
+                     <th>Email</th>
+                     <th>Phone Numner</th>
+                  </tr>
+                  {% for user in userprofile_list %}
+                  <tr>
+                     <td><a href="/user/{{user.id}}">{{user.id}}</a> </td>
+                     <td>{{user.name}}</td>
+                     <td>{{user.email}}</td>
+                     <td>{{user.phone_number}}</td>
+                  </tr>
+                  {% endfor %}
+               </table>
+            </td>
+         </tr>
+         
+      </table>
+   </div>
+   </body>
+	
+</html>

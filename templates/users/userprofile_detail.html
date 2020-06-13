@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table</title>
+   </head>
+	
+   <body>
+      <div style="padding: 10px;">
+      <table border = "1" width = "100%">
+         
+         <tr>
+            <td>
+               <table border = "1" width = "100%">
+                  <tr>
+                     <td>User ID</td>
+                     <td>{{userprofile.id}}</td>
+                  </tr>
+
+                  <tr>
+                     <td>Name</td>
+                     <td>{{userprofile.name}}</td>
+                  </tr>
+                  <tr>
+                     <td>Email</td>
+                     <td>{{userprofile.email}}</td>
+                     
+                  </tr>
+                  <tr>
+                     <td>Phone Numner</td>
+                     <td>{{userprofile.phone_number}}</td>
+                     
+                  </tr>
+                  <tr>
+                     <td>Github</td>
+                     <td><pre>{{userprofile.github}}</pre></td>
+                  </tr>
+                  <tr>
+                     <td>Twitter</td>
+                     <td><pre>{{userprofile.twitter}}</pre></td>
+                  </tr>
+                  <tr>
+                     <td>LinkedIn</td>
+                     <td><pre>{{userprofile.linkedin}}</pre></td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         
+      </table>
+   </div>
+   </body>
+	
+</html>
