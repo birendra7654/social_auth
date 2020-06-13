@@ -1,13 +1,12 @@
 import os
 import datetime
-from . import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 SECRET_KEY = ')g9@#vb=-(2q^#=_+rzpmmx1kt#4gdn^ovsd4j!z@cv88wpl2i'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -71,23 +70,14 @@ REST_FRAMEWORK = {
 }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'social_auth',
-        'USER': 'admin',
-        'PASSWORD': 'my_password',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASS"),
+        'HOST': os.environ.get("DB_HOST"),
+        'PORT': os.environ.get("DB_PORT"),
     }
 }
 
